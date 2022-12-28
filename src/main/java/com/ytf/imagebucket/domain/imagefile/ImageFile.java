@@ -30,6 +30,6 @@ public class ImageFile extends AuditingFields {
 	@JoinColumn(name = "directory_id")
 	private Directory directoryId;
 
-	@Column(name = "image_name", length = 1000, nullable = false)
-	private String imageName;
+	@Column(name = "name", length = 1000, nullable = false)
+	private String name;
 }

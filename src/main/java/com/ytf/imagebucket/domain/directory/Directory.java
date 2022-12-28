@@ -32,6 +32,6 @@ public class Directory extends AuditingFields {
 	@OneToMany(mappedBy = "parentDirectoryId")
 	private Set<Directory> childDirectories = new HashSet<>();
 
-	@Column(name = "directory_name", length = 1000, nullable = false)
-	private String directoryName;
+	@Column(name = "name", length = 1000, nullable = false)
+	private String name;
 }
