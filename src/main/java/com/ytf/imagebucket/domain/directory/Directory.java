@@ -1,6 +1,5 @@
 package com.ytf.imagebucket.domain.directory;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import com.ytf.imagebucket.domain.AuditingFields;
@@ -30,7 +29,7 @@ public class Directory extends AuditingFields {
 	private Long parentDirectoryId;
 
 	@OneToMany(mappedBy = "parentDirectoryId")
-	private Set<Directory> childDirectories = new HashSet<>();
+	private Set<Directory> childDirectories;
 
 	@Column(name = "name", length = 1000, nullable = false)
 	private String name;
