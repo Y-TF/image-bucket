@@ -33,4 +33,11 @@ public class Directory extends AuditingFields {
 
 	@Column(name = "name", length = 1000, nullable = false)
 	private String name;
+
+	public static Directory of(String name, Long parentDirectoryId) {
+		Directory directory = new Directory();
+		directory.name = name;
+		directory.parentDirectoryId = parentDirectoryId;
+		return directory;
+	}
 }
